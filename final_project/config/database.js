@@ -1,1 +1,1 @@
-console
+Som push 1
