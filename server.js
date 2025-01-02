@@ -18,8 +18,6 @@ app.use(express.urlencoded({ extended: true }));
 //   // Configure flash middleware
 // app.use(flash());
   
-
-
 app.use(session({ 
     secret:'cyber cadt idri idt idg', 
     saveUninitialized: true, 
