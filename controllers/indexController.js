@@ -3,7 +3,7 @@ const Product = require("../models/productModel");
 exports.getListProduct = async (req,res) => {
     try{
         const products = await Product.getAll();
-        title = "List product"
+        const title = "List product"
         res.render('index/index',{products,title});
     
     }catch(err){

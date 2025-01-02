@@ -4,7 +4,7 @@ const upload = require('../config/multer');
 exports.getAllProducts = async (req,res) => {
     try{
         const products = await Product.getAll();
-        title = "List product"
+        const title = "List product"
         res.render('product/index',{products,title});
         
     }catch(err){
@@ -13,7 +13,7 @@ exports.getAllProducts = async (req,res) => {
 };
 
 exports.renderCreateForm = (req,res)=>{
-    title = "New Product"
+    const title = "New Product"
     res.render('product/create',{title});
 };
 
@@ -37,7 +37,7 @@ exports.createProduct = async(req,res)=>{
 exports.getProductById = async (req,res) => {
     try {
         const product = await Product.getById(req.params.id);
-        title = "Show product";
+        const title = "Show product";
         if (product) {
           res.render('product/show', { product,title });
         } else {
@@ -51,7 +51,7 @@ exports.getProductById = async (req,res) => {
 exports.renderEditForm = async (req, res) => {
     try {
       const product = await Product.getById(req.params.id);
-      title = "Edit Product";
+      const title = "Edit Product";
       if (product) {
         res.render('product/edit', { product,title });
       } else {
